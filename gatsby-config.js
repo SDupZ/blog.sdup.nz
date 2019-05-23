@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Simon du Preez`,
     author: `Simon du Preez`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `A blog for Simon du Preez`,
+    siteUrl: `https://blog.sdup.nz`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `nzdupz`,
     },
   },
   plugins: [
@@ -63,8 +63,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Simon du Preez blog`,
+        short_name: `simondupreez_blog`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
