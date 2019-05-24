@@ -74,7 +74,7 @@ certainly on their way.
 
 The tech stack I work with uses GraphQL without Apollo client and literally every rection to this was:
 
-![But why?](./but_why.jpeg)
+"But why?!"
 
 An emphasized point was that **far too much state is put into Redux**. Apollo is aiming to handle all the data fetching / caching side of things. So a key takeaway is see how far you can get without Redux and you might be surprised!
 
