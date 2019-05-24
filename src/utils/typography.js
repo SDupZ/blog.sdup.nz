@@ -1,17 +1,25 @@
-import Typography from "typography"
-import Wordpress2016 from "typography-theme-wordpress-2016"
 
-Wordpress2016.overrideThemeStyles = () => {
-  return {
-    "a.gatsby-resp-image-link": {
-      boxShadow: `none`,
-    },
-  }
-}
+import Typography from 'typography'
+import noriegaTheme from 'typography-theme-noriega'
+import gray from 'gray-percentage';
 
-delete Wordpress2016.googleFonts
+noriegaTheme.overrideStyles = ({ adjustFontSizeTo, rhythm }, options, styles) => ({
+  blockquote: {
+    ...adjustFontSizeTo('19px'),
+    color: gray(41),
+    fontStyle: 'italic',
+    paddingLeft: rhythm(13/16),
+    marginLeft: rhythm(-1),
+    borderLeft: `${rhythm(3/16)} solid ${gray(10)}`,
+  },
+  'blockquote > :last-child': {
+    marginBottom: 0,
+  },
+})
 
-const typography = new Typography(Wordpress2016)
+
+const typography = new Typography(noriegaTheme)
+
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
@@ -21,3 +29,4 @@ if (process.env.NODE_ENV !== `production`) {
 export default typography
 export const rhythm = typography.rhythm
 export const scale = typography.scale
+
