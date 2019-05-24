@@ -1,6 +1,6 @@
 ---
 title: My experience at React Amsterdam 2019
-date: "2019-05-06T23:46:37.121Z"
+date: "2019-05-24T23:46:37.121Z"
 description: In April 2019 I attended React Amsterdam all the way from New Zealand. It was three days of non-stop React with a huge focus on the newly released React Hooks!
 ---
 
