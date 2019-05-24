@@ -20,6 +20,8 @@ to include here.
 # Overall themes
 During the three days some overall themes came up time and time again. These are my observations about the general feeling towards these technologies.
 
+![React hooks](./hooks.png)
+
 ## Hooks
 
 No surprises here! Hooks are the most anticipated and talked about feature in the React community at the moment. They are a brilliant
@@ -64,6 +66,7 @@ One final piece of advice that I would like to expand on further in another post
 `useRef` can actually be thought of as state that when it changes does not cause a re-render. This is similar to class properties in Javascript.
 You can read a little more in the docs [here](https://reactjs.org/docs/hooks-faq.html#is-there-something-like-instance-variables)
 
+![GraphQL Apollo logo](./apollo-logo.png)
 
 ### Apollo + GraphQL
 GraphQL is currently taking over the world and Apollo, as the leader of the GraphQl Client / Server space is doing so as well. This was clearly evident at React Amsterdam. A significant amount of people are using it today and the people that aren't are
