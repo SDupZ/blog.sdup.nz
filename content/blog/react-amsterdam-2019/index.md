@@ -1,7 +1,10 @@
 ---
 title: My experience at React Amsterdam 2019
 date: "2019-05-06T23:46:37.121Z"
+description: In April 2019 I attended React Amsterdam all the way from New Zealand. This is what it was about and what I learned.
 ---
+
+![React amsterdam cover](https://scontent.fakl2-1.fna.fbcdn.net/v/t1.0-9/57210703_864886970528065_7262220962261630976_o.jpg?_nc_cat=109&_nc_ht=scontent.fakl2-1.fna&oh=94925d66f9a923392b7a1995cb062e65&oe=5D60B89A)
 
 Just over a month ago I was fortunate enough to be able to attend [React Amsterdam](https://react.amsterdam/). Big thanks
 to the tech team at [Crimson Education](https://crimsoneducation.org) for sending me all the way over from New Zealand!
@@ -11,8 +14,8 @@ As my first tech conference it was a fantastic event where I was able to learn f
 I attended two workshops: **Advanced React with Kent C. Dodds** and **Modern React with Max Stoiber**. Both hugely beneficial in
 learning patterns and techniques to make our apps back home a pleasure to work on.
 
-The whole conference was jam packed with an enormous amount of information. Far too much for one post. I've heavily cut out talks and info
-in the interest of brevity.
+The whole conference was jam packed with an enormous amount of information. Far too much for one post, so I've cherry picked only a handful of topics
+to include here.
 
 # Overall themes
 During the three days some overall themes came up time and time again. These are my observations about the general feeling towards these technologies.
@@ -20,7 +23,7 @@ During the three days some overall themes came up time and time again. These are
 ## Hooks
 
 No surprises here! Hooks are the most anticipated and talked about feature in the React community at the moment. They are a brilliant
-way to break out our data and logic from components. We no longer need enormously nested trees with RenderProps and Hocs wrapping every `<div />`
+way to break out our data and logic from components. We no longer need enormously nested trees with RenderProps and Hocs wrapping every `<div />`  🎉
 
 > Classes and Redux are out.
 > Hooks and context are in.
@@ -34,32 +37,32 @@ Even though the React team have [**no plans to remove classes from React**](http
 class components are on their way out. Definitely something to keep in mind. Our team has started using hooks in new code and not one of us has yet to find a case where we've needed to revert back to using classes (yet!).
 Embarking on a rewrite of your existing apps is a waste of time, however updating code as you touch it and using hooks in new code is a solid strategy moving forward.
 
-My money is that before you know it classes will be a thing of the past. 3 years ago when React was gaining traction Dan released a tweet that said: [**Don't go re-writing everything**](https://twitter.com/dan_abramov/status/808770915584638976?s=20) in regards to using React. Fast forward 3 years into the future and most apps that use React are built entriely with React. We've got the same statement 3 years later but now with hooks. 🤔
+My prediction is that before you know it classes will be a thing of the past. 3 years ago when React was gaining traction Dan released a tweet that said: [**Don't go re-writing everything**](https://twitter.com/dan_abramov/status/808770915584638976?s=20) to use React. Fast forward 3 years into the future and most apps that *use* React are built *entriely* with React. We've got the same statement 3 years later but now with hooks. 🤔
 
 ### Some tips and tricks for using hooks
 
 Hooks have some interesting rules and quirks surrounding them. These are due to how they are implemented under the hood.
 Notably they must only be used at the top level. They **cannot** be used inside **if** statements, **loops** or any other conditionals.
-**Every** render of a component the exact same number of hooks must be called in the same order and way.
+**Every** render of a component, the exact same number of hooks must be called in the same order and way.
 
-An easy way to make sure you don't fall into some beginner traps is to use the official [**eslint**](https://reactjs.org/docs/hooks-faq.html#what-exactly-do-the-lint-rules-enforce) plugin.
+An easy way to make sure you don't fall into some early traps is to use the official [**eslint**](https://www.npmjs.com/package/eslint-plugin-react-hooks) plugin.
 
 Other things to remember:
 
-* You cannot use them in class components.
+* You cannot use them in class components
 
-* It's tempting to use hooks in a similar way to `this.setState` and put a whole object `{}` into state. This will likely lead to bugs however as hooks *replace* state, whereas `this.setState` will *merge* the sate.
+* It's tempting to use hooks in a similar way to `this.setState` and put a whole js object `{}` into state. However, this will likely lead to bugs as hooks *replace* state, whereas `this.setState` will *merge* the state
 
-* useReducer better when computing state from the inputs. Even if there are more than like 3 or 4 if its primitive then it might be better to continue to use setState.
+* useReducer is better than useState when computing state from multiple values. If your state values are independant of each other they are better suited to individual calls to React.useState, even if you have more than 3 or 4 pieces of state
 
 * When working with Context API, use `useContext` instead of the context consumer component
 
 One final piece of advice that I would like to expand on further in another post is that:
 
-> In new React, Refs are not just for Dom nodes.
+> In new React, Refs are not just for Dom nodes
 
 `useRef` can actually be thought of as state that when it changes does not cause a re-render. This is similar to class properties in Javascript.
-You can read a little more in the docs [here](https://reactjs.org/docs/hooks-faq.html#is-there-something-like-instance-variables).
+You can read a little more in the docs [here](https://reactjs.org/docs/hooks-faq.html#is-there-something-like-instance-variables)
 
 
 ### Apollo + GraphQL
@@ -99,7 +102,7 @@ Namely the following cannot be used in concurrent mode:
 
 Your team can prepare for these changes by wrapping all your new code (and old if you're brave) in the `<React.StrictMode>` tag. This is stripped out in production builds
 but during development will fire warnings to the console where you've breached any of the conditions for concurrent mode. You can add this as many times you like and anywhere
-in the tree so the isn't much excuse to not using it.
+in the tree so there isn't much excuse to not using it.
 
 # Takeaways
 
