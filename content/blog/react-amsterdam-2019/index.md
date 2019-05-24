@@ -1,7 +1,7 @@
 ---
 title: My experience at React Amsterdam 2019
 date: "2019-05-06T23:46:37.121Z"
-description: In April 2019 I attended React Amsterdam all the way from New Zealand. This is what it was about and what I learned.
+description: In April 2019 I attended React Amsterdam all the way from New Zealand. It was three days of non-stop React with a huge focus on the newly released React Hooks!
 ---
 
 ![React amsterdam cover](https://scontent.fakl2-1.fna.fbcdn.net/v/t1.0-9/57210703_864886970528065_7262220962261630976_o.jpg?_nc_cat=109&_nc_ht=scontent.fakl2-1.fna&oh=94925d66f9a923392b7a1995cb062e65&oe=5D60B89A)
